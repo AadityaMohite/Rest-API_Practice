@@ -2,6 +2,13 @@ package com.Aadi.entity;
 
 
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.sql.Update;
+
 import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -40,6 +47,16 @@ public class Product {
 	
 	
 	private String category;
+	
+	private LocalDate mfgDate;
+	
+	private LocalDate expDate;
+	
+	@CreationTimestamp
+	private LocalDateTime savedat;
+	
+	@UpdateTimestamp
+	private LocalDateTime update_aTime;
 	
 	
 }

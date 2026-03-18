@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ExceptionApp {
      
-//	@ExceptionHandler (value = Exception.class)
-//	public String exceptionhandler(Exception e) {
-//		
-//		return e.getMessage();
-//		
-//	
-//	}
+	@ExceptionHandler (value = Exception.class)
+	public String exceptionhandler(Exception e) {
+		
+		return e.getMessage();
+		
+	
+	}
 	
 	@ExceptionHandler(value = MethodArgumentNotValidException.class)
 	public ResponseEntity<Map<String, String>> handlemethodargumentexception(MethodArgumentNotValidException e) {

@@ -1,5 +1,7 @@
 package com.Aadi.dto;
 
+import java.time.LocalDate;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -27,7 +29,11 @@ class ProductDto{
 		@NotBlank(message = "Category is required")
 		private String category;
 		
-	
+	    @NotNull
+		private LocalDate mfgDate;
+	    
+		@NotNull
+		private LocalDate expDate;
 	
 	
 	
